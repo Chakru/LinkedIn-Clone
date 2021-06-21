@@ -11,6 +11,10 @@
 # production
 /build
 
+#VsCode Settings
+.prettierrc.js
+.vscode/
+
 # misc
 .DS_Store
 .env.local
