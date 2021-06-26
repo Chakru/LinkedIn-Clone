@@ -7,10 +7,19 @@ import SupervisorAccountIcon from '@material-ui/icons/SupervisorAccount';
 import BusinessCenterIcon from '@material-ui/icons/BusinessCenter';
 import ChatIcon from '@material-ui/icons/Chat';
 import NotificationIcon from '@material-ui/icons/Notifications';
+import { logout } from '../../features/userSlice';
+import { useDispatch } from 'react-redux';
+import { auth } from '../../firebase';
+
 const Header = () => {
+  const dispatch = useDispatch();
+
+  const logOutOfApp = () => {
+    dispatch(logout());
+    auth.signOut();
+  };
   return (
     <div className="header">
-      {/* Header Left  */}
       <div className="header__left">
         <img
           src="https://image.flaticon.com/icons/png/512/174/174857.png"
@@ -18,20 +27,16 @@ const Header = () => {
         />
         <div className="header__search">
           <SearchIcon />
-          <input type="text" />
+          <input type="text" placeholder="Search" />
         </div>
       </div>
-      {/* Header Right */}
       <div className="header__right">
         <HeaderOptions Icon={HomeIcon} title="Home" />
         <HeaderOptions Icon={SupervisorAccountIcon} title="My Network" />
         <HeaderOptions Icon={BusinessCenterIcon} title="Jobs" />
         <HeaderOptions Icon={ChatIcon} title="Messaging" />
         <HeaderOptions Icon={NotificationIcon} title="Networking" />
-        <HeaderOptions
-          avatar="https://media-exp3.licdn.com/dms/image/C5603AQE00xDtb37bAg/profile-displayphoto-shrink_100_100/0/1517531165371?e=1629936000&v=beta&t=FHgq8_EXdVJ451JYL3Rd8Fvy41Foly74JFpMTpfq1ls"
-          title="Me"
-        />
+        <HeaderOptions avatar={true} title="Me" onClick={logOutOfApp} />
       </div>
     </div>
   );
