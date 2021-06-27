@@ -9,14 +9,14 @@ import {
   ThumbUpAltOutlined,
 } from '@material-ui/icons';
 
-const Post = ({ username, description, photoUrl, message }) => {
+const Post = ({ username, email, photoUrl, message }) => {
   return (
     <div className="post">
       <div className="post__header">
         <Avatar src={photoUrl}>{username[0]}</Avatar>
         <div className="post__info">
           <h2>{username}</h2>
-          <p>{description}</p>
+          <p>{email}</p>
         </div>
       </div>
       <div className="post__body">
