@@ -1,13 +1,13 @@
 import React from 'react';
-import './Post.css';
 import { Avatar } from '@material-ui/core';
-import InputOption from '../Feeds/InputOption/InputOption';
 import {
   ChatOutlined,
   SendOutlined,
   ShareOutlined,
   ThumbUpAltOutlined,
 } from '@material-ui/icons';
+import InputOption from '../Feeds/InputOption/InputOption';
+import './Post.css';
 
 const Post = ({ username, email, photoUrl, message }) => {
   return (

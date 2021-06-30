@@ -7,14 +7,13 @@ The platform which is mainly used for professional networking. Here the user can
 ![Image](/src/assets/loginScreen.png)
 ![Image](/src/assets/testPost.png)
 
-<!-- Url of the app https://trackcorona19.netlify.app -->
-<!-- What lib i used -->
-<!-- TODO -->
-<!-- Ask for contribution from other deveoper Fork and inform -->
+## Live Site
+
+[LinkedIn-Clone](https://linkedin-cloned.netlify.app/)
 
 ## Built With
 
 - [React JS](https://reactjs.org/docs/getting-started.html/)
 - [Material UI](https://material-ui.com/)
-- [Firebasse](https://firebase.google.com/)
+- [Firebase](https://firebase.google.com/)
 - [Redux](https://redux.js.org/)

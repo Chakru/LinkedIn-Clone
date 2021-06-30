@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from 'react';
-import './Feed.css';
+import { useSelector } from 'react-redux';
+import CalendarViewDayIcon from '@material-ui/icons/CalendarViewDay';
 import CreateIcon from '@material-ui/icons/Create';
-import InputOption from './InputOption/InputOption';
+import EventNoteIcon from '@material-ui/icons/EventNote';
 import ImageIcon from '@material-ui/icons/Image';
 import SubscriptionsIcon from '@material-ui/icons/Subscriptions';
-import EventNoteIcon from '@material-ui/icons/EventNote';
-import CalendarViewDayIcon from '@material-ui/icons/CalendarViewDay';
+import InputOption from './InputOption/InputOption';
 import Post from '../Post/Post';
 import { db } from '../../firebase';
 import firebase from 'firebase';
-import { useSelector } from 'react-redux';
 import { selectUser } from '../../features/userSlice';
+import './Feed.css';
 
 const Feed = () => {
   const user = useSelector(selectUser);

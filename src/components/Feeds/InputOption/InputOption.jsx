@@ -1,5 +1,6 @@
 import React from 'react';
 import './InputOption.css';
+
 const InputOption = ({ Icon, color, title }) => {
   return (
     <div className="inputOption">
